@@ -1,6 +1,6 @@
 $(function () {
     //是否产生新元素
-    var isNewRndItme = false;
+    var isNewRndItem = false;
     var gameScore = 0;
     //最高分
     var maxScore = 0;
@@ -72,7 +72,7 @@ $(function () {
             sideItem.html(currentItem.html()).removeClass('emptyItem').addClass('nonEmptyItem');
             currentItem.html('').removeClass('nonEmptyItem').addClass('emptyItem');
             itemMove(sideItem, direction);
-            isNewRndItme = true;
+            isNewRndItem = true;
 
         } else if (sideItem.html() != currentItem.html()) {//左（右、上、下）侧元素和当前元素内容不同
             //不动
@@ -87,7 +87,7 @@ $(function () {
             maxScore = maxScore < gameScore ? gameScore : maxScore;
             $('#maxScore').html(maxScore);
             localStorage.maxScore = maxScore;
-            isNewRndItme = true;
+            isNewRndItem = true;
             return;
         }
     }
@@ -110,7 +110,7 @@ $(function () {
         }
 
         //是否产生新元素
-        if (isNewRndItme) {
+        if (isNewRndItem) {
             newRndItem();
             refreshColor();
         }
@@ -232,28 +232,28 @@ $(function () {
             case 37:
                 // left
                 console.log('left');
-                isNewRndItme = false;
+                isNewRndItem = false;
                 move('left');
                 isGameOver();
                 break;
             case 38:
                 // up
                 console.log('up');
-                isNewRndItme = false;
+                isNewRndItem = false;
                 move('up');
                 isGameOver();
                 break;
             case 39:
                 // right
                 console.log('right');
-                isNewRndItme = false;
+                isNewRndItem = false;
                 move('right');
                 isGameOver();
                 break;
             case 40:
                 // down
                 console.log('down');
-                isNewRndItme = false;
+                isNewRndItem = false;
                 move('down');
                 isGameOver();
                 break;
@@ -267,7 +267,7 @@ $(function () {
             e.preventDefault();
             // alert("方向向右");
             console.log('right');
-            isNewRndItme = false;
+            isNewRndItem = false;
             move('right');
             isGameOver();
 
@@ -275,7 +275,7 @@ $(function () {
         document.getElementById("gameBody").addEventListener('touleft', function (e) {
             // alert("方向向左");
             console.log('left');
-            isNewRndItme = false;
+            isNewRndItem = false;
             move('left');
             isGameOver();
 
@@ -283,14 +283,14 @@ $(function () {
         document.getElementById("gameBody").addEventListener('toudown', function (e) {
             // alert("方向向下");
             console.log('down');
-            isNewRndItme = false;
+            isNewRndItem = false;
             move('down');
             isGameOver();
         });
         document.getElementById("gameBody").addEventListener('touup', function (e) {
             // alert("方向向上");
             console.log('up');
-            isNewRndItme = false;
+            isNewRndItem = false;
             move('up');
             isGameOver();
         });
