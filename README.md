@@ -18,7 +18,7 @@
 
 ## 4、游戏截图
 
-![](https://raw.githubusercontent.com/nnngu/FigureBed/master/2018/2/9/Snip20180210_9.png)
+![](https://raw.githubusercontent.com/nnngu/FigureBed/master/2018/2/9/Snip20180210_7.png)
 
 ## 5、游戏实现原理
 
