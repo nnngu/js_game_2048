@@ -13,6 +13,13 @@
 </head>
 <body>
 
+<!-- 禁止浏览器的上下滚动 -->
+<script type='text/javascript'>
+    document.querySelector('body').addEventListener('touchstart', function (ev) {
+        event.preventDefault();
+    });
+</script>
+
 <div class="container">
     <div class="main">
         <div class="gameName">2048小游戏</div>
