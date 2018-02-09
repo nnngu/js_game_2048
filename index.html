@@ -13,11 +13,13 @@
 </head>
 <body>
 
- <!--禁止浏览器的上下滚动 -->
+<!--禁止浏览器的上下滚动 -->
 <script type='text/javascript'>
-    document.querySelector('body').addEventListener('touchmove', function (ev) {
-        event.preventDefault();
-    });
+    var timer1 = window.setInterval(function () {
+        document.querySelector('body').addEventListener('touchmove', function (ev) {
+            event.preventDefault();
+        });
+    }, 500);
 </script>
 
 <div class="container">
@@ -26,7 +28,7 @@
         <div class="maxScore">最高分：
             <span id="maxScore">1345612</span>
         </div>
-        <div class="col-sm-3 col-md-4"> </div>
+        <div class="col-sm-3 col-md-4"></div>
         <div class="gameBody col-sm-6 col-md-4" id="gameBody">
             <div class="row">
                 <div class="item emptyItem x0y0" x="0" y="0"></div>
@@ -55,7 +57,7 @@
         </div>
         <div class="gameRule col-sm-12 col-md-12">电脑：请用键盘的方向键进行操作</div>
         <div class="gameRule col-sm-12 col-md-12">手机：请划动屏幕进行操作</div>
-        <div class="col-sm-4 col-md-4"> </div>
+        <div class="col-sm-4 col-md-4"></div>
         <div class="scoreAndRefresh col-sm-6 col-md-6">
             <div class="gameScore ">得分：<span id="gameScore">0</span> 分</div>
             <button type="button" class="btn btn-danger refreshBtn">
@@ -63,7 +65,8 @@
             </button>
         </div>
         <div class="col-sm-12 col-md-12" style="line-height: 40px">
-            源代码：<a href="https://github.com/nnngu/js_game_2048" target="_blank">https://github.com/nnngu/js_game_2048</a>
+            源代码：<a href="https://github.com/nnngu/js_game_2048"
+                   target="_blank">https://github.com/nnngu/js_game_2048</a>
         </div>
 
         <div class="modal fade" id="gameOverModal" aria-labelledby="myModalLabel" aria-hidden="true"
