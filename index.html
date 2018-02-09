@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>2048小游戏</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
     <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -14,12 +13,12 @@
 </head>
 <body>
 
-<!-- 禁止浏览器的上下滚动 -->
-<!--<script type='text/javascript'>-->
-    <!--document.querySelector('body').addEventListener('touchstart', function (ev) {-->
-        <!--event.preventDefault();-->
-    <!--});-->
-<!--</script>-->
+ <!--禁止浏览器的上下滚动 -->
+<script type='text/javascript'>
+    document.querySelector('body').addEventListener('touchmove', function (ev) {
+        event.preventDefault();
+    });
+</script>
 
 <div class="container">
     <div class="main">
