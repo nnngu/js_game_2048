@@ -270,7 +270,6 @@ $(function () {
             isNewRndItem = false;
             move('right');
             isGameOver();
-            event.preventDefault();
         });
         document.getElementById("gameBody").addEventListener('touleft', function (e) {
             // alert("方向向左");
@@ -278,8 +277,6 @@ $(function () {
             isNewRndItem = false;
             move('left');
             isGameOver();
-            event.preventDefault();
-
         });
         document.getElementById("gameBody").addEventListener('toudown', function (e) {
             // alert("方向向下");
@@ -287,7 +284,6 @@ $(function () {
             isNewRndItem = false;
             move('down');
             isGameOver();
-            event.preventDefault();
         });
         document.getElementById("gameBody").addEventListener('touup', function (e) {
             // alert("方向向上");
@@ -295,7 +291,6 @@ $(function () {
             isNewRndItem = false;
             move('up');
             isGameOver();
-            event.preventDefault();
         });
 
         function mobilwmtouch(obj) {
